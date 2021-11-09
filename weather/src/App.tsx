@@ -20,7 +20,7 @@ const App = () => {
       <React.Suspense fallback={"loading..."}>
         <SearchCity setCity={setCity} />
         <SearchHistory setCity={setCity} />
-        <CurrentWeather city={city} />
+        <CurrentWeather />
       </React.Suspense>
     </div>
   );

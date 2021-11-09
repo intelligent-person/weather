@@ -10,6 +10,7 @@ let initialState = {
   weather: null as Array<WeatherType> | null,
   searchHistory: [] as Array<string>,
   searchError: false as boolean,
+  city: "Kiev" as string,
 };
 type InitialStateType = typeof initialState;
 const appReducer = (state = initialState, action: any): InitialStateType => {
@@ -19,23 +20,25 @@ const appReducer = (state = initialState, action: any): InitialStateType => {
       let length = state.searchHistory.length;
       if (length < 10) {
         if (repeat) {
-          return { ...state, weather: action.weather.list };
+          return { ...state, weather: action.weather.list, city: action.city };
         } else {
           return {
             ...state,
             weather: action.weather.list,
             searchHistory: [action.city, ...state.searchHistory],
+            city: action.city,
           };
         }
       } else {
         if (repeat) {
-          return { ...state, weather: action.weather.list };
+          return { ...state, weather: action.weather.list, city: action.city };
         } else {
           return {
             ...state,
             weather: action.weather.list,
             searchHistory: [action.city],
             ...state.searchHistory.slice(0, 8),
+            city: action.city,
           };
         }
       }

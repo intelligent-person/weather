@@ -4,13 +4,12 @@ import { useSelector } from "react-redux";
 import { WeatherType } from "../../types/types";
 import DailyWeather from "../DailyWeather/DailyWeather";
 
-type PropsType = {
-  city: string;
-};
-const CurrentWeather: React.FC<PropsType> = ({ city }) => {
+const CurrentWeather = () => {
   const { t } = useTranslation();
   // @ts-ignore
   const currentWeather = useSelector((state) => state.app.weather);
+  // @ts-ignore
+  const city = useSelector((state) => state.app.city);
   console.log(currentWeather);
   return (
     <div>
