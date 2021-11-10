@@ -1,5 +1,9 @@
 {
-  "currentWeather": "Текущая температура воздуха",
-  "requiredError": "Введите город",
-  "patternError": "Используйте только латинские буквы"
+  "currentWeather": "Current weather",
+  "requiredError": "Enter city",
+  "patternError": "Use only Latin letters",
+  "uncorrectedValue": "Incorrect city entered",
+  "lastSearch": "Search history",
+  "search": "Search",
+  "weatherForWeek": "Weather for 5 days"
 }

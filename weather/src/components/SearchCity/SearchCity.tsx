@@ -33,7 +33,7 @@ const SearchCity: React.FC<PropsType> = ({ setCity }) => {
         onChange={(e) => setValue(e.target.value)}
         placeholder={"Введите город"}
       />
-      <input type="submit" value={"Поиск"} />
+      <input className={styles.submit} type="submit" value={`${t("search")}`} />
       {searchError && <p className={styles.error}>{t("uncorrectedValue")}</p>}
       {errors?.searchValue?.type === "required" && (
         <p className={styles.error}>{t("requiredError")}</p>

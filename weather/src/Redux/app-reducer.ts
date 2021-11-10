@@ -20,7 +20,15 @@ const appReducer = (state = initialState, action: any): InitialStateType => {
       let length = state.searchHistory.length;
       if (length < 10) {
         if (repeat) {
-          return { ...state, weather: action.weather.list, city: action.city };
+          return {
+            ...state,
+            weather: action.weather.list,
+            searchHistory: [
+              action.city,
+              ...state.searchHistory.filter((item) => item !== action.city),
+            ],
+            city: action.city,
+          };
         } else {
           return {
             ...state,
@@ -31,7 +39,15 @@ const appReducer = (state = initialState, action: any): InitialStateType => {
         }
       } else {
         if (repeat) {
-          return { ...state, weather: action.weather.list, city: action.city };
+          return {
+            ...state,
+            weather: action.weather.list,
+            searchHistory: [
+              action.city,
+              ...state.searchHistory.filter((item) => item !== action.city),
+            ],
+            city: action.city,
+          };
         } else {
           return {
             ...state,
@@ -75,10 +91,10 @@ export const setSearchError = (isError: boolean): SetSearchErrorActionType => ({
 // THUNK_____________________________
 type ThunkType = ThunkAction<void, AppStateType, unknown, ActionTypes>;
 export const getWeather =
-  (city: string): ThunkType =>
+  (city: string, language: string): ThunkType =>
   async (dispatch) => {
     try {
-      let response = await weatherAPI.getWeather(city);
+      let response = await weatherAPI.getWeather(city, language);
       dispatch(setWeather(response.data, city));
       dispatch(setSearchError(false));
     } catch (err: any) {

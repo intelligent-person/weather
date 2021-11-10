@@ -1,0 +1,26 @@
+.title {
+  color: white;
+  margin-left: 15px;
+  margin-bottom: 5px;
+}
+
+.searchHistory {
+  text-align: left;
+  background-color: rgba(102, 153, 204, 0.6);
+  border-radius: 20px;
+  padding: 0 5px 10px;
+}
+
+.historic {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-gap: 10px;
+}
+
+.city {
+  border: none;
+  background-color: rgba(102, 153, 204, 0.8);
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+}

@@ -5,6 +5,7 @@ import { getWeather } from "./Redux/app-reducer";
 import SearchCity from "./components/SearchCity/SearchCity";
 import "./utils/i18n";
 import SearchHistory from "./components/SearchHistory/SearchHistory";
+import ChangeLanguage from "./components/ChangeLanguage/ChangeLanguage";
 const CurrentWeather = React.lazy(
   () => import("./components/CurrentWeather/CurrentWeather")
 );
@@ -12,15 +13,17 @@ const CurrentWeather = React.lazy(
 const App = () => {
   const dispatch = useDispatch();
   const [city, setCity] = useState("Kiev");
+  const [language, setLanguage] = useState("ru");
   useEffect(() => {
-    dispatch(getWeather(city));
-  }, [dispatch, city]);
+    dispatch(getWeather(city, language));
+  }, [dispatch, city, language]);
   return (
     <div style={{ maxWidth: 800, margin: "0 auto", textAlign: "center" }}>
       <React.Suspense fallback={"loading..."}>
         <SearchCity setCity={setCity} />
+        <ChangeLanguage language={language} setLanguage={setLanguage} />
         <SearchHistory setCity={setCity} />
-        <CurrentWeather />
+        <CurrentWeather language={language} />
       </React.Suspense>
     </div>
   );

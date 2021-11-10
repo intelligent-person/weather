@@ -1,0 +1,36 @@
+.day {
+  background-color: rgba(102, 153, 204, 0.6);
+  border-radius: 10px;
+}
+
+.day:hover {
+  background-color: #d7d7d7;
+  transition: linear 0.3s;
+}
+.day:hover h1 {
+  font-size: 50px;
+  margin: 0;
+  transition: linear 0.3s;
+}
+.day:hover h4 {
+  font-size: 25px;
+  margin-top: 7px;
+  margin-bottom: 0;
+  transition: linear 0.3s;
+}
+
+.description {
+  display: block;
+  font-size: 20px;
+  padding-bottom: 15px;
+  line-height: 20px;
+}
+
+h1 {
+  margin-bottom: 5px;
+}
+
+.icon {
+  height: 100px;
+  line-height: 150px;
+}

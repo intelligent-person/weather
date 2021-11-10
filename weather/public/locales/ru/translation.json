@@ -2,6 +2,8 @@
   "currentWeather": "Текущая температура воздуха",
   "requiredError": "Введите город",
   "patternError": "Используйте только латинские буквы",
-  "uncorrectedValue": "Введен не корректный город",
-  "lastSearch": "Предыдущие поиски"
+  "uncorrectedValue": "Введен некорректный город",
+  "lastSearch": "Предыдущие поиски",
+  "search": "Искать",
+  "weatherForWeek": "Погода на 5 дней"
 }
