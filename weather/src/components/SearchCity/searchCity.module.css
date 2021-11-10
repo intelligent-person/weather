@@ -1,4 +1,28 @@
 .error {
   margin: 0;
   color: red;
+  text-align: left;
+}
+
+.search {
+  width: 300px;
+  height: 20px;
+  border-radius: 10px;
+  margin-right: 10px;
+  background-color: white;
+  padding: 5px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+.submit {
+  background-image: url("https://img.icons8.com/color/35/000000/search--v1.png");
+  background-repeat: no-repeat;
+  background-color: inherit;
+  border: none;
+  height: 30px;
+  margin-bottom: -10px;
+  width: 30px;
+}
+.submit:hover {
+  cursor: pointer;
 }

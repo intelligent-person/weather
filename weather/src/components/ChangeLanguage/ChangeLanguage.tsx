@@ -1,5 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import styles from "./changeLanguage.module.css";
 
 type PropsType = {
   language: string;
@@ -16,7 +17,11 @@ const ChangeLanguage: React.FC<PropsType> = ({ language, setLanguage }) => {
       i18n.changeLanguage("ru");
     }
   };
-  return <button onClick={changeLang}>{language}</button>;
+  return (
+    <button className={styles.lang} onClick={changeLang}>
+      {language}
+    </button>
+  );
 };
 
 export default React.memo(ChangeLanguage);

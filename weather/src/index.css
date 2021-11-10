@@ -7,6 +7,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-family: "Oswald", sans-serif;
   background-image: url("icons/img/fon.jpg");
+  color: white;
 }
 
 code {

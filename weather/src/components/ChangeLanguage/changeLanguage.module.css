@@ -1,0 +1,12 @@
+.lang {
+  width: 40px;
+  border-radius: 5px;
+  border: none;
+  font-size: 17px;
+}
+.lang:hover {
+  cursor: pointer;
+  background-color: rgba(102, 153, 204, 0.6);
+  color: white;
+  transition: linear 0.2s;
+}

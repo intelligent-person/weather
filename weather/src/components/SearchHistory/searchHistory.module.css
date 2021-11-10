@@ -15,6 +15,7 @@
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   grid-gap: 10px;
+  padding: 0 15px;
 }
 
 .city {
@@ -23,4 +24,10 @@
   border-radius: 10px;
   color: white;
   cursor: pointer;
+  padding: 3px;
+}
+.city:hover {
+  background-color: white;
+  color: black;
+  transition: linear 0.3s;
 }

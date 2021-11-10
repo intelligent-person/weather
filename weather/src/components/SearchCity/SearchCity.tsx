@@ -25,6 +25,7 @@ const SearchCity: React.FC<PropsType> = ({ setCity }) => {
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <input
+        className={styles.search}
         {...register("searchValue", {
           required: true,
           pattern: /^[A-Za-z]+$/i,
@@ -33,7 +34,7 @@ const SearchCity: React.FC<PropsType> = ({ setCity }) => {
         onChange={(e) => setValue(e.target.value)}
         placeholder={"Введите город"}
       />
-      <input className={styles.submit} type="submit" value={`${t("search")}`} />
+      <input className={styles.submit} type="submit" value={""} />
       {searchError && <p className={styles.error}>{t("uncorrectedValue")}</p>}
       {errors?.searchValue?.type === "required" && (
         <p className={styles.error}>{t("requiredError")}</p>

@@ -20,8 +20,16 @@ const App = () => {
   return (
     <div style={{ maxWidth: 800, margin: "0 auto", textAlign: "center" }}>
       <React.Suspense fallback={"loading..."}>
-        <SearchCity setCity={setCity} />
-        <ChangeLanguage language={language} setLanguage={setLanguage} />
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            marginTop: 50,
+          }}
+        >
+          <SearchCity setCity={setCity} />
+          <ChangeLanguage language={language} setLanguage={setLanguage} />
+        </div>
         <SearchHistory setCity={setCity} />
         <CurrentWeather language={language} />
       </React.Suspense>

@@ -5,7 +5,8 @@
 
 .day:hover {
   background-color: #d7d7d7;
-  transition: linear 0.3s;
+  color: black;
+  transition: linear 0.2s;
 }
 .day:hover h1 {
   font-size: 50px;
